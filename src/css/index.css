@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  scroll-snap-type: y mandatory;
+  overflow-y:scroll;
+  height:100vh;
+}
+
+section {
+  height: 100vh;
+  display:flex;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+
+h1 {
+  color:#F7A325;
+}
+
+.about-me {
+  background: #454d66;
+}
+
+.ex-and-ed {
+  background: #58b368;  
+}
+
+.projects {
+  background: rgb(199,65,123);
+  background: linear-gradient(162deg, rgba(199,65,123,1) 0%, rgba(2,0,36,1) 100%);
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
