@@ -14,13 +14,10 @@
 section {
   height: 100vh;
   display:flex;
-  justify-content: center;
+  /* justify-content: left; */
   scroll-snap-align: start;
 }
 
-h1 {
-  color:#F7A325;
-}
 
 .about-me {
   background: #454d66;
@@ -33,7 +30,70 @@ h1 {
 .projects {
   background: rgb(199,65,123);
   background: linear-gradient(162deg, rgba(199,65,123,1) 0%, rgba(2,0,36,1) 100%);
+}
 
+.header {
+  justify-content: center;
+}
+
+h1 {
+  color:#F7A325;
+}
+
+.title {
+  margin-left: 10px;
+  justify-content: center;
+}
+
+.name {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 100px;
+  letter-spacing: 0.01em;
+}
+
+.sub-title {
+  font-family: 'Bebas Neue', cursive;
+  color:white;
+  letter-spacing: 0.6em;
+  margin:-10px 0px 5px 0px;
+  /* justify-content: left; */
+}
+
+.contact-info {
+display:flex;
+margin: 0px 10px 0px 80px;
+
+}
+
+.contact-icons {
+  height:30px;
+  margin: 5px 5px 0px 10px;
+  color:white;
+}
+
+#location-info {
+  display:flex;
+}
+
+#location-text {
+  margin-top: 10px;
+  color:white;
+}
+
+p {
+  font-family: 'Raleway', sans-serif;
+  color:white;
+  float: left;
+  padding: 50px 10px 0px 10px;
+  font-weight: 100;
+  word-spacing: 5px;
+}
+
+p#location-text {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  margin: 10px 0px 0px 0px;
+  padding:0px;
 }
 
 code {
