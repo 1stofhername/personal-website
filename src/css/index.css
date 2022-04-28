@@ -14,13 +14,12 @@
 section {
   height: 100vh;
   display:flex;
-  /* justify-content: left; */
   scroll-snap-align: start;
 }
 
-
 .about-me {
   background: #454d66;
+  justify-content: center;
 }
 
 .ex-and-ed {
@@ -34,14 +33,18 @@ section {
 
 .header {
   justify-content: center;
+  margin-left: 10px;
+}
+
+.column-one {
+  width:50%;
 }
 
 h1 {
-  color:#F7A325;
+  color:#f56038;
 }
 
 .title {
-  margin-left: 10px;
   justify-content: center;
 }
 
@@ -49,6 +52,7 @@ h1 {
   font-family: 'Bebas Neue', cursive;
   font-size: 100px;
   letter-spacing: 0.01em;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
 
 .sub-title {
@@ -56,44 +60,63 @@ h1 {
   color:white;
   letter-spacing: 0.6em;
   margin:-10px 0px 5px 0px;
-  /* justify-content: left; */
 }
 
 .contact-info {
-display:flex;
-margin: 0px 10px 0px 80px;
+  justify-content: center;
+  display:flex;
+  margin: 0px 10px 0px 10px;
+  padding-left: 15px;
 
 }
 
 .contact-icons {
   height:30px;
   margin: 5px 5px 0px 10px;
-  color:white;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+.contact-icons:hover,
+.contact-icons:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
+  transform: translateY(-0.25em);
 }
 
 #location-info {
   display:flex;
 }
 
-#location-text {
-  margin-top: 10px;
-  color:white;
-}
-
 p {
   font-family: 'Raleway', sans-serif;
   color:white;
   float: left;
-  padding: 50px 10px 0px 10px;
+  padding: 50px 35px 0px 35px;
+  margin-bottom:-20px;
   font-weight: 100;
-  word-spacing: 5px;
+  word-spacing: 3px;
+  text-align: justify;
+  line-height: 140%;
 }
 
 p#location-text {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
-  margin: 10px 0px 0px 0px;
+  color:#f7a325;
+  margin: 12px 0px 0px 0px;
   padding:0px;
+  line-height: 100%;
+}
+
+.bold-text {
+  color:#ffc266;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding:0px;
+}
+
+#skills {
+  background-color: #3e455b;
+  height:100px;
 }
 
 code {
