@@ -1,0 +1,51 @@
+@media all and (min-width:321px) and (max-width: 480px) {
+    .contact-info {
+      justify-content: left;
+      display:flex;
+      margin: 0px 0px 0px 60px;
+      padding-left: 15px;
+    }
+
+    .contact-icons {
+        height:30px;
+        margin: 5px 5px 0px 10px;
+        filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+      }
+      
+    .container {
+        scroll-snap-type: unset;
+        overflow-y:scroll;
+        height:100vh;
+      }
+
+    section {
+      height: 125vh;
+      display:flex;
+      /* scroll-snap-align: start; */
+    }
+    .details {
+      font-size: 20px;
+      
+    }
+  
+    .header {
+      justify-content: center;
+      margin: 50px 0px 0px 0px;
+    }
+    p {
+      font-family: 'Raleway', sans-serif;
+      color:white;
+      float: left;
+      padding: 50px 0px 0px 0px;
+      margin-bottom:-20px;
+      font-weight: 100;
+      word-spacing: 3px;
+      text-align: justify;
+      line-height: 140%;
+    }
+  
+    .column-one {
+      width:100%;
+      
+    }
+  }

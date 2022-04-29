@@ -1,14 +1,28 @@
-import React, { useState } from 'react';
+import { getElementError } from '@testing-library/react';
+import React, { useEffect, useState } from 'react';
+import me from '../assets/me-pic.png';
 
 export default function AboutMe () {
+
+    function toggleLocationText () {
+        const relocate = document.getElementById('relocate');
+        const seattle = document.getElementById('seattle');
+        relocate.removeAttribute('hidden'); document.getElementById('seattle').setAttribute('hidden', true);
+        setTimeout(()=>{
+            relocate.setAttribute("hidden", true); seattle.removeAttribute('hidden');
+        },3000)
+    };
 
     return (
         <>
         <div className='column-one'>
             <div className="header">
+
                 <div className="title">
-                <h1 className="name">Alicia Parris</h1>
-                <h2 className="sub-title">Fullstack Developer</h2>
+                    <h1 className="name">Alicia Parris</h1>
+                    <h2 className="sub-title">Fullstack Developer</h2>
+                </div>
+
                 <div className="contact-info">
                     <span id="email">
                         <a href="mailto:aliciaparris@zoho.com">
@@ -26,27 +40,25 @@ export default function AboutMe () {
                         </a>
                     </span>
                     <span id="location-info">
-                        <img className="contact-icons" src="https://img.icons8.com/ios/50/f7a325/marker--v1.png"/>
-                        <p id="location-text">SEATTLE, WA</p>
+                        <img onMouseOver={()=>{toggleLocationText()}} className="contact-icons" src="https://img.icons8.com/ios/50/f7a325/marker--v1.png"/>
+                        <p id="relocate" className='location-text' hidden>Willing to relocate</p>
+                        <p id="seattle" className='location-text' onMouseOver={toggleLocationText()}>SEATTLE, WA</p>
                     </span>
                 </div>
-                </div>
-                <div className="details">
-                    <p>
-                        <span className="bold-text">HELLO!</span> I am a <span className="bold-text">FULLSTACK ENGINEER</span> actively searching for a position with opportunity for learning and growth.
-                    </p>
-                    <img src="img_avatar.png" alt="Avatar"></img>
-                    <p>
-                        I am <span className="bold-text">PASSIONATE</span> about building  <span className="bold-text">CREATIVE SOLUTIONS</span> to crack complex problems and bringing my <span className="bold-text">UNIQUE PERSPECTIVE</span> to any teams I am a part of.
-                    </p>
-                </div>
+                <img id="me" src={me} alt="photo of me"/>
             </div>
-            
+            <div className="details">
+                    <p className='paragraph'>
+                        <span className="bold-text">WELCOME!</span> I am a <span className="bold-text">FULLSTACK DEVELOPER</span> actively seeking a position with opportunity for <span id="job-attribute" className="job-attributes">GROWTH</span><span className="job-attributes" id="job-attribute-2" hidden>CHALLENGES</span><span className="job-attributes" id="job-attribute-3" hidden>LEARNING</span><span className="job-attributes" id="job-attribute-4" hidden>INNOVATION</span>.
+                    </p>
+            </div>
+            <div className="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
         </div>
-        {/* <div id="skills">
-        <p>JavaScript</p>
-        <p>React.js</p>
-    </div> */}
-        </>
+        </div>
+        
+            </>
     )
 }
