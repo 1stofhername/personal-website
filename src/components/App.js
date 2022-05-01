@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import '../css/App.css';
 import '../css/mobile.css'
-import AboutMe from './AboutMe';
+import Landing from './Landing';
 import ExperienceAndEd from './ExperienceAndEd';
 import Projects from './Projects';
 
@@ -26,7 +26,7 @@ function App() {
     <div className="App">
       <div className='container'>
         <section className="about-me">
-          <AboutMe />
+          <Landing />
         </section>
         <section className="ex-and-ed">
           <ExperienceAndEd />
