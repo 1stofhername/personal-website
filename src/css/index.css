@@ -34,15 +34,18 @@ section {
 .column-one {
   width:50%;
   align-content: center;
+  flex-direction: row;
+  order: 1;
+  
 }
 
 h1 {
   color:#f56038;
 }
 
-.title {
+/* .title {
   justify-content: center;
-}
+} */
 
 .name {
   font-family: 'Bebas Neue', cursive;
@@ -55,13 +58,12 @@ h1 {
   font-family: 'Bebas Neue', cursive;
   color:white;
   letter-spacing: 0.615em;
-  margin:-10px 0px 5px 10px;
+  margin:0px 0px 5px 10px;
 }
 
-.contact-info {
+.contact-info-container {
   justify-content: left;
   display:flex;
-  margin: 0px 10px 0px 115px;
   padding-left: 15px;
 
 }
@@ -87,7 +89,7 @@ p {
   font-family: 'Raleway', sans-serif;
   color:white;
   /* padding: 50px 35px 0px 35px; */
-  margin:50px 5px 50px 20px;
+  margin:50px -50px 50px 50px;
   font-weight: 200;
   word-spacing: 3px;
   text-align: justify;
@@ -191,7 +193,10 @@ code {
 
 .column-two {
   width:100%;
-  display:flex;
+  /* display:flex; */
+  align-content: center;
+  flex-direction: row;
+  order: 2;
 }
 
 .sub-title-2 {
@@ -210,9 +215,7 @@ p.about-me-details {
 
 #super-powers-container {
   background-color: rgba(255,194,102, .75);
-  /* margin: 10px 0px 0px 50px ; */
-  padding: 20px 0px 5px 0px;
-  /* width:50%; */
+  width:50%;
 }
 
 #super-powers-sub-title {
@@ -221,11 +224,12 @@ p.about-me-details {
 
 .skill-container {
   display:flex;
+  flex-wrap:wrap;
   /* margin-left: 10px; */
 }
 
 .skill-icon {
-  margin: 10px 15px 20px 0px;
+  margin: 10px 15px 20px 15px;
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5));
   
 } 
