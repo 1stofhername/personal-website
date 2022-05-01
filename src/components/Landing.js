@@ -6,6 +6,12 @@ import javaScript from '../assets/icons/javascript.svg';
 import react from '../assets/icons/react.svg';
 import css from '../assets/icons/css3.svg';
 import ruby from '../assets/icons/ruby.svg';
+import github from '../assets/icons/github.svg'
+import location from '../assets/icons/location.svg'
+import linkedin from '../assets/icons/linkedin.svg'
+import envelope from '../assets/icons/envelope.svg'
+import plane from '../assets/icons/plane.svg'
+
 
 export default function Landing () {
 
@@ -33,21 +39,23 @@ export default function Landing () {
                 <div className="contact-info-container">
                     <span id="email">
                         <a href="mailto:aliciaparris@zoho.com">
-                            <img className="contact-icons" src="https://img.icons8.com/ios/50/f7a325/circled-envelope.png"/>
+                            <img className="contact-icons" src={envelope}/>
                         </a>
                     </span>
                     <span id="linkedin">
                         <a href="http://www.linkedin.com/in/idealcandidate" target="blank">
-                            <img className="contact-icons" src="https://img.icons8.com/ios/50/f7a325/linkedin-circled--v1.png"/>
+                            <img className="contact-icons" src={linkedin}/>
                         </a>
                     </span>
                     <span id="github">
                         <a href="https://github.com/1stofhername" target="blank">
-                            <img className="contact-icons" src="https://img.icons8.com/ios/50/f7a325/github--v1.png"/>
+                            <img className="contact-icons" src={github}/>
                         </a>
                     </span>
                     <span id="location-info">
-                        <img onMouseOver={()=>{toggleLocationText()}} className="contact-icons" src="https://img.icons8.com/ios/50/f7a325/marker--v1.png"/>
+                        <img id="location-icon" onMouseOver={()=>{toggleLocationText()}} className="contact-icons" src={location}/>
+                        <img id="plane-icon" className="contact-icons" src={plane} hidden/>
+
                         <p id="relocate" className='location-text' hidden>Willing to relocate</p>
                         <p id="seattle" className='location-text' onMouseOver={()=>{toggleLocationText()}}>SEATTLE, WA</p>
                     </span>
@@ -62,7 +70,7 @@ export default function Landing () {
 
 
         <div className="column-two">
-        <h2 className="sub-title">ABOUT ME</h2>
+        <h2 id="about-me-sub-title" className="sub-title">ABOUT ME</h2>
         <div className="details">
                     <p className='paragraph'>
                         <span className="bold-text">HELLO!</span> I'm a <span className="bold-text">WEB DEVELOPER</span> actively seeking a position with opportunity for <span id="job-attribute" className="job-attributes">GROWTH,</span> <span className="job-attributes" id="job-attribute-2">CHALLENGES, </span>and <span className="job-attributes" id="job-attribute-3">INNOVATION</span>.

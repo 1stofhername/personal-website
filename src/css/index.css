@@ -5,10 +5,6 @@
   font-family: sans-serif;
 }
 
-.landing {
-  display:flex;
-}
-
 .container {
   scroll-snap-type: y mandatory;
   overflow-y:scroll;
@@ -21,22 +17,21 @@ section {
   scroll-snap-align: start;
 }
 
-.about-me {
-  background: #454d66;
-  justify-content: center;
+.landing {
+  display:flex;
+  align-items: center;
+}
+
+.column-one {
+  flex:50%;
+  align-content: center;
+  flex-direction: row;
+  order: 1;
 }
 
 .header {
   justify-content: center;
   margin: 50px 0px 0px 10px;
-}
-
-.column-one {
-  width:50%;
-  align-content: center;
-  flex-direction: row;
-  order: 1;
-  
 }
 
 h1 {
@@ -69,7 +64,7 @@ h1 {
 }
 
 .contact-icons {
-  height:30px;
+  height:50px;
   margin: 5px 5px 5px 5px;
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0));
 }
@@ -132,10 +127,84 @@ p.location-text {
 
 #me {
   height:250px;
-  /* width: 200px; */
   border-radius: 50%;
   margin: 50px 0px 50px 0px;
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  }
+
+  /* COLUMN TWO */
+
+  .column-two {
+    flex:100%;
+    /* display:flex; */
+    align-content: center;
+    order: 2;
+  }
+  
+  .about-me {
+    background: #454d66;
+    justify-content: center;
+  }
+
+  #about-me-sub-title{
+    margin: 0px 0px 0px 0px;
+    align-self: center;
+  }
+  
+  .sub-title-2 {
+    font-family: 'Bebas Neue', cursive;
+    color:black;
+    letter-spacing: 0.6em;
+    margin:0px 0px 5px 0px;
+  }
+  
+  p.about-me-details {
+    color:black;
+    /* margin-left: 50px; */
+  }
+  
+  /* SKILLS */
+  
+  #super-powers-container {
+    background-color: rgba(255,194,102, .75);
+    width:50%;
+  }
+  
+  #super-powers-sub-title {
+    margin-top: 20px;
+  }
+  
+  .skill-container {
+    display:flex;
+    flex-wrap:wrap;
+    /* margin-left: 10px; */
+  }
+  
+  .skill-icon {
+    margin: 10px 15px 20px 15px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5));
+    
+  } 
+  
+  .skill-icon:hover {
+    margin: 10px 15px 10px 0px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255,255,255, 0.5));
+    transform: translateY(-0.25em);
+    
+  } 
+  
+  #ruby {
+    height: 45px;
+    margin: 0px 10px 5px 0px
+  }
+  
+  #javascript {
+    height: 49px;
+  }
+  
+  #rest {
+    height: 49px;
+    margin: 0px 10px 13px 0px
   }
 
 code {
@@ -191,69 +260,7 @@ code {
   background-color: rgba(245, 96, 56, 1);
 }
 
-.column-two {
-  width:100%;
-  /* display:flex; */
-  align-content: center;
-  flex-direction: row;
-  order: 2;
-}
 
-.sub-title-2 {
-  font-family: 'Bebas Neue', cursive;
-  color:black;
-  letter-spacing: 0.6em;
-  margin:0px 0px 5px 0px;
-}
-
-p.about-me-details {
-  color:black;
-  /* margin-left: 50px; */
-}
-
-/* SKILLS */
-
-#super-powers-container {
-  background-color: rgba(255,194,102, .75);
-  width:50%;
-}
-
-#super-powers-sub-title {
-  margin-top: 20px;
-}
-
-.skill-container {
-  display:flex;
-  flex-wrap:wrap;
-  /* margin-left: 10px; */
-}
-
-.skill-icon {
-  margin: 10px 15px 20px 15px;
-  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5));
-  
-} 
-
-.skill-icon:hover {
-  margin: 10px 15px 10px 0px;
-  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255,255,255, 0.5));
-  transform: translateY(-0.25em);
-  
-} 
-
-#ruby {
-  height: 45px;
-  margin: 0px 10px 5px 0px
-}
-
-#javascript {
-  height: 49px;
-}
-
-#rest {
-  height: 49px;
-  margin: 0px 10px 13px 0px
-}
 
 /* EDUACTION */
 
