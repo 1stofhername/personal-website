@@ -20,33 +20,26 @@ section {
 .landing {
   display:flex;
   align-items: center;
+  
 }
 
 .column-one {
-  flex:50%;
+  flex:100%;
   align-content: center;
   flex-direction: row;
   order: 1;
 }
 
-.header {
+.personal-info-container {
   justify-content: center;
-  margin: 50px 0px 0px 10px;
 }
-
-h1 {
-  color:#f56038;
-}
-
-/* .title {
-  justify-content: center;
-} */
 
 .name {
   font-family: 'Bebas Neue', cursive;
   font-size: 100px;
   letter-spacing: 0.01em;
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+  color:#f56038;
 }
 
 .sub-title {
@@ -56,16 +49,18 @@ h1 {
   margin:0px 0px 5px 10px;
 }
 
-.contact-info-container {
-  justify-content: left;
-  display:flex;
-  padding-left: 15px;
+#fullstack-dev {
+  margin-top: -10px;
+}
 
+.contact-info-container {
+  justify-content: center;
+  display:flex;
 }
 
 .contact-icons {
-  height:50px;
-  margin: 5px 5px 5px 5px;
+  height:40px;
+  margin: 5px 10px 5px 10px;
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0));
 }
 
@@ -83,19 +78,17 @@ h1 {
 p {
   font-family: 'Raleway', sans-serif;
   color:white;
-  /* padding: 50px 35px 0px 35px; */
-  margin:50px -50px 50px 50px;
   font-weight: 200;
   word-spacing: 3px;
+  margin: 20px 0px 40px 0px;
   text-align: justify;
   line-height: 140%;
   filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
 }
 
-.details {
-  width:50%;
-  font-size: 20px;
-  /* margin-left: 130px; */
+.about-paragraph-container {
+  width:75%;
+  padding:20px;
 }
 
 .job-attributes {
@@ -110,7 +103,7 @@ p.location-text {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   color:#f7a325;
-  margin: 12px 0px 0px 0px;
+  margin: 15px 0px 0px -5px;
   padding:0px;
   line-height: 100%;
   
@@ -122,7 +115,15 @@ p.location-text {
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   padding:0px;
-  font-size: 21px;
+  font-size: 20px;
+}
+
+.dark-bold-text {
+  color:black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding:0px;
+  font-size: 20px;
 }
 
 #me {
@@ -135,9 +136,10 @@ p.location-text {
   /* COLUMN TWO */
 
   .column-two {
-    flex:100%;
+    width:100%;
     /* display:flex; */
-    align-content: center;
+    margin-top:-5px ;
+    text-align: center;
     order: 2;
   }
   
@@ -147,7 +149,7 @@ p.location-text {
   }
 
   #about-me-sub-title{
-    margin: 0px 0px 0px 0px;
+    margin: 0px 0px 40px 0px;
     align-self: center;
   }
   
@@ -160,6 +162,7 @@ p.location-text {
   
   p.about-me-details {
     color:black;
+    
     /* margin-left: 50px; */
   }
   
@@ -167,7 +170,8 @@ p.location-text {
   
   #super-powers-container {
     background-color: rgba(255,194,102, .75);
-    width:50%;
+    width:75%;  
+    
   }
   
   #super-powers-sub-title {
@@ -185,11 +189,17 @@ p.location-text {
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5));
     
   } 
+
+  .skill-text {
+    color:black;
+    font-size: 15px;
+    filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5));
+  }
   
   .skill-icon:hover {
     margin: 10px 15px 10px 0px;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255,255,255, 0.5));
-    transform: translateY(-0.25em);
+    transform: translate(-0.005em);
     
   } 
   
@@ -251,26 +261,39 @@ code {
 
 /* Experience & Education Page */
 
-/* .intro-container {
-  width:20%
-} */
 
 .ex-and-ed {
   padding-top:50px;
   background-color: rgba(245, 96, 56, 1);
 }
 
-
-
-/* EDUACTION */
-
-
-.education-container {
+.resume-section {
   background-color: rgba(255,255,255, .75);
   margin: 50px 0px 0px 50px ;
   padding: 20px 0px 20px 20px;
   width:95%;
   justify-content: center;
+}
+
+#jobs-container {
+  background-color: rgba(255,194,102, .75);
+  margin: 1rem;
+  padding: 2rem 2rem;
+  text-align: center;
+}
+
+#role {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: top;
+  width:45%;
+}
+
+#skills-demonstrated {
+  display: inline-block;
+  padding: 1rem 1rem;
+  vertical-align: middle;
+  width:45%;
 }
 
 p.education-details {
