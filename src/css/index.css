@@ -8,6 +8,7 @@
 .container {
   scroll-snap-type: y mandatory;
   overflow-y:scroll;
+  overflow-x: hidden;
   height:100vh;
 }
 
@@ -19,15 +20,16 @@ section {
 
 .landing {
   display:flex;
-  align-items: center;
+  /* flex-direction: row; */
+  justify-content: center;
   
+  transform: translate(100px, 50px);
 }
 
 .column-one {
-  flex:100%;
   align-content: center;
   flex-direction: row;
-  order: 1;
+  margin-right:20px;
 }
 
 .personal-info-container {
@@ -49,6 +51,13 @@ section {
   margin:0px 0px 5px 10px;
 }
 
+.sub-title-2 {
+  font-family: 'Bebas Neue', cursive;
+  color:black;
+  letter-spacing: 0.6em;
+  margin:0px 0px 5px 0px;
+}
+
 #fullstack-dev {
   margin-top: -10px;
 }
@@ -66,8 +75,8 @@ section {
 
 .contact-icons:hover,
 .contact-icons:focus {
-  box-shadow: 0 0.5em 0.5em -0.4em var(--hover);
-  transform: translateY(-0.25em);
+  /* filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5)); */
+    transform: translate(-0.25em, -0.25em);
 }
 
 #location-info {
@@ -87,8 +96,10 @@ p {
 }
 
 .about-paragraph-container {
-  width:75%;
-  padding:20px;
+  width:70%;
+  background-color: rgba(247, 163, 37, .9);
+  transform: translate(10px, 5px);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 .job-attributes {
@@ -111,7 +122,15 @@ p.location-text {
 }
 
 .bold-text {
-  color:#f7a325;
+  color:rgba(245, 96, 56, 1);
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding:0px;
+  font-size: 20px;
+}
+
+.red-bold-text {
+  color:#f56038;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   padding:0px;
@@ -120,6 +139,14 @@ p.location-text {
 
 .dark-bold-text {
   color:black;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  padding:0px;
+  font-size: 20px;
+}
+
+.white-bold-text {
+  color:white;
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   padding:0px;
@@ -136,11 +163,9 @@ p.location-text {
   /* COLUMN TWO */
 
   .column-two {
-    width:100%;
-    /* display:flex; */
+    width:50%;
     margin-top:-5px ;
-    text-align: center;
-    order: 2;
+    justify-content: center;
   }
   
   .about-me {
@@ -150,44 +175,46 @@ p.location-text {
 
   #about-me-sub-title{
     margin: 0px 0px 40px 0px;
-    align-self: center;
   }
   
-  .sub-title-2 {
-    font-family: 'Bebas Neue', cursive;
+  p.about-paragraph-one {
     color:black;
-    letter-spacing: 0.6em;
-    margin:0px 0px 5px 0px;
+    padding:20px 20px 10px 20px;
   }
-  
-  p.about-me-details {
+
+  p.about-paragraph-two {
     color:black;
-    
-    /* margin-left: 50px; */
+    padding:10px 20px 20px 20px;
+    margin-top:-40px;
   }
   
   /* SKILLS */
   
-  #super-powers-container {
-    background-color: rgba(255,194,102, .75);
-    width:75%;  
-    
+  div#super-powers-container {
+    background-color: rgba(247, 163, 37, .9);
+    transform: translate(-40px, 0);
+    width:70%;
+    max-height: max-content;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
   }
   
   #super-powers-sub-title {
     margin-top: 20px;
+    color:white;
   }
   
   .skill-container {
     display:flex;
     flex-wrap:wrap;
-    /* margin-left: 10px; */
+    padding: 20px;
+    justify-content: center;
   }
   
   .skill-icon {
-    margin: 10px 15px 20px 15px;
+    margin: 10px 30px 20px 30px;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5));
-    
+    flex-wrap: wrap;
+    width:80px;
   } 
 
   .skill-text {
@@ -197,10 +224,8 @@ p.location-text {
   }
   
   .skill-icon:hover {
-    margin: 10px 15px 10px 0px;
     filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(255,255,255, 0.5));
-    transform: translate(-0.005em);
-    
+    transform: translate(-0.25em, -0.25em);
   } 
   
   #ruby {
@@ -226,9 +251,10 @@ code {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,-50%);
+  transform: translate(-650%,-150%);
   margin-top:300px;
 }
+
 .arrow span{
   display: block;
   width: 30px;
@@ -263,50 +289,102 @@ code {
 
 
 .ex-and-ed {
-  padding-top:50px;
+  padding:20px;
+
   background-color: rgba(245, 96, 56, 1);
 }
 
 .resume-section {
-  background-color: rgba(255,255,255, .75);
-  margin: 50px 0px 0px 50px ;
-  padding: 20px 0px 20px 20px;
   width:95%;
+}
+
+#experience-sub-title {
+ padding-bottom: 10px; 
+}
+
+.jobs-section {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-height: 90%;
+}
+
+div.jobs-section > div {
+  background-color: rgba(255,194,102, .75);
+  vertical-align: middle;
+  width:45%;
+  margin:1rem;
+}
+
+.role {
+  display: inline-flex;
+  flex-direction: row;
   justify-content: center;
 }
 
-#jobs-container {
-  background-color: rgba(255,194,102, .75);
-  margin: 1rem;
-  padding: 2rem 2rem;
+.experience-listing {
+  display:inline;
+  flex-wrap: wrap;
+  background-color: rgba(255,255,255, .75);
+  margin:20px;
+  padding:20px;
+  justify-content: space-around;
+}
+
+span.job-title {
+  display:flex;
+  font-size:17px;
+  color:black;
+  width:fit-content;
+  margin:auto;
+}
+
+.role-title {
+  color:black;
+  font-weight: 700;
+}
+
+.role-details {
+  margin-bottom:20px;
+  margin-top:-10px;
   text-align: center;
 }
 
-#role {
-  display: inline-block;
-  padding: 1rem 1rem;
-  vertical-align: top;
-  width:45%;
-}
-
-#skills-demonstrated {
-  display: inline-block;
-  padding: 1rem 1rem;
-  vertical-align: middle;
-  width:45%;
-}
-
-p.education-details {
-  justify-content: center;
-  margin: 10px 0px 0px 10px;
-  color:black;
-  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0,0,0, 0.5));
+.grad-cap {
+ height:40px;
+ margin:10px 10px 0px 10px;
 }
 
 /* Projects page */
 
 .projects {
   background-color:#ffc266;
+}
+
+.project-container{
+  background-color: rgba(255,255,255, .75);
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.project-gif {
+  width:500px;
+  order:1;
+}
+
+.project-link {
+  background:black;
+  font-family: 'Raleway', sans-serif;
+  color:white;
+  font-weight: 200;
+  padding:10px 20px 10px 20px;
+  text-decoration: none;
+  margin:20px;
+  display:inline-block;
+  order:2;
 }
 
 /* @media all and (min-width:0px) and (max-width: 320px) {

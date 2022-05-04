@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import postgresIcon from '../assets/icons/postgresql.svg';
 import javaScript from '../assets/icons/javascript.svg';
 import react from '../assets/icons/react.svg';
@@ -5,7 +7,9 @@ import css from '../assets/icons/css3.svg';
 import ruby from '../assets/icons/ruby.svg';
 import typescript from '../assets/icons/typescript.svg';
 
+
 export default function SuperPowers () {
+    
     return (
 <div id="super-powers-container">
                 <h2 className="sub-title-2">SUPERPOWERS</h2>

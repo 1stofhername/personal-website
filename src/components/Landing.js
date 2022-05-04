@@ -1,5 +1,4 @@
 import { getElementError } from '@testing-library/react';
-import React, { useEffect, useState } from 'react';
 
 import AboutMeDetails from './AboutMeDetails';
 import SuperPowers from './SuperPowers';
@@ -11,6 +10,7 @@ export default function Landing () {
     
 
     return (
+        <>
         <div className='landing'>
             <div className='column-one'>
                 <PersonalInfo />
@@ -20,10 +20,11 @@ export default function Landing () {
                 <SuperPowers />
             </div>
             <div className="arrow">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-            </div>
+        <span></span>
+        <span></span>
+        <span></span>
         </div>
+        </div>
+        </>
     )
 }
