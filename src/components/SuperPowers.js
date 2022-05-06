@@ -1,5 +1,4 @@
-import { useEffect, useState } from 'react';
-
+import React from 'react'; 
 import postgresIcon from '../assets/icons/postgresql.svg';
 import javaScript from '../assets/icons/javascript.svg';
 import react from '../assets/icons/react.svg';

@@ -1,3 +1,4 @@
+import React from 'react'; 
 import me from '../assets/me-pic.png';
 import location from '../assets/icons/location.svg'
 import linkedin from '../assets/icons/linkedin.svg'

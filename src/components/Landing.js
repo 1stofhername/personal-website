@@ -1,5 +1,4 @@
-import { getElementError } from '@testing-library/react';
-
+import React from 'react'; 
 import AboutMeDetails from './AboutMeDetails';
 import SuperPowers from './SuperPowers';
 import PersonalInfo from './PersonalInfo';
@@ -20,10 +19,10 @@ export default function Landing () {
                 <SuperPowers />
             </div>
             <div className="arrow">
-        <span></span>
-        <span></span>
-        <span></span>
-        </div>
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         </>
     )

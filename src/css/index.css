@@ -48,7 +48,7 @@ section {
   font-family: 'Bebas Neue', cursive;
   color:white;
   letter-spacing: 0.615em;
-  margin:0px 0px 5px 10px;
+  margin:0px 0px 15px 10px;
 }
 
 .sub-title-2 {
@@ -97,7 +97,7 @@ p {
 
 .about-paragraph-container {
   width:70%;
-  background-color: rgba(247, 163, 37, .9);
+  background-color: rgba(247, 163, 37, .8);
   transform: translate(10px, 5px);
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
@@ -191,7 +191,7 @@ p.location-text {
   /* SKILLS */
   
   div#super-powers-container {
-    background-color: rgba(247, 163, 37, .9);
+    background-color: rgba(247, 163, 37, .8);
     transform: translate(-40px, 0);
     width:70%;
     max-height: max-content;
@@ -290,7 +290,8 @@ code {
 
 .ex-and-ed {
   padding:20px;
-
+  display:flex;
+  justify-content:center;
   background-color: rgba(245, 96, 56, 1);
 }
 
@@ -298,8 +299,17 @@ code {
   width:95%;
 }
 
-#experience-sub-title {
- padding-bottom: 10px; 
+#summary-container {
+  background-color: #ffc266;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+  width:95%;
+  transform: translate(15px);
+  text-align: left;
+}
+
+.education-details {
+  color:black;
+  padding:10px;
 }
 
 .jobs-section {
@@ -311,7 +321,7 @@ code {
 }
 
 div.jobs-section > div {
-  background-color: rgba(255,194,102, .75);
+  background-color: rgba(255,255,255, .75);
   vertical-align: middle;
   width:45%;
   margin:1rem;
@@ -330,6 +340,15 @@ div.jobs-section > div {
   margin:20px;
   padding:20px;
   justify-content: space-around;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.experience-listing:hover, :focus {
+  transform: translate(.5rem, .5rem);
+}
+
+#exp-summary{
+  margin-bottom: 30px;
 }
 
 span.job-title {
@@ -348,7 +367,11 @@ span.job-title {
 .role-details {
   margin-bottom:20px;
   margin-top:-10px;
+  margin-right:20px;
+  margin-left:20px;
   text-align: center;
+  font-weight: 700;
+  background-color:black;
 }
 
 .grad-cap {
@@ -356,18 +379,44 @@ span.job-title {
  margin:10px 10px 0px 10px;
 }
 
+/* .details-section {
+  display:flex;
+  justify-content: space-around;
+  width:100%;
+} */
+
+.detail-container {
+  padding:20px;
+  margin:20px;
+  
+}
+
+li {
+  font-family: 'Raleway', sans-serif;
+  color:black;
+  font-weight: 200;
+  word-spacing: 3px;
+  margin: 20px 0px 40px 0px;
+  text-align: left;
+  line-height: 140%;
+  filter: drop-shadow(0.35rem 0.35rem 0.4rem rgba(0, 0, 0, 0.5));
+}
+
+
+
 /* Projects page */
 
 .projects {
   background-color:#ffc266;
+  display:flex;
+  justify-content: center;
 }
 
 .project-container{
   background-color: rgba(255,255,255, .75);
   padding: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
+  margin:20px;
+
 }
 
 .project-gif {

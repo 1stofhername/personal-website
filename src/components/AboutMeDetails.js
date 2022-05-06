@@ -1,3 +1,5 @@
+import React from 'react'; 
+
 export default function AboutMeDetails () {
     return (
         <div className="about-paragraph-container">

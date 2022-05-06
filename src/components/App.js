@@ -1,9 +1,11 @@
+import React from 'react'; 
 import { useEffect, useState } from "react";
 import '../css/App.css';
 import '../css/mobile.css'
 import Landing from './Landing';
 import ExperienceAndEd from './ExperienceAndEd';
 import Projects from './Projects';
+
 
 function App() {
 
