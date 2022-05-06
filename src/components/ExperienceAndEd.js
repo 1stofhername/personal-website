@@ -2,7 +2,7 @@ import React from 'react';
 import JobDetails from './JobDetails';
 import { useState } from 'react';
 import graduationCap from "../assets/icons/graduation-cap.svg";
-import backarrow from '../assets/icons/backarrow.svg';
+import backarrow from '../assets/icons/whitearrow.svg';
 import { roles } from './job-data';
 
 
@@ -14,20 +14,24 @@ export default function ExperienceAndEd () {
        setSelectedJob(e.target.id);
     }
 
+    function handleBackClick (){
+        document.getElementById('experience-sub-title').innerHTML="experience and education";
+        setSelectedJob("");
+    }
+
     return (
         <div className="column-one-pg2">
-            <div id='summary-container'>
+            
                     {selectedJob? 
-                    <img className="back-button" onClick={()=>{setSelectedJob("")}} src={backarrow} />
-                    :<p className='education-details' id="exp-summary">Pivoting from tech-adjacent roles into a tech-focused role. Click each entry to see how my past roles have prepared me to be a successful software developer! </p>}
-            </div>
-            <h2 className='sub-title'id="experience-sub-title">experience</h2>
+                    <div className="nav-container"><img className="back-button" onClick={()=>handleBackClick()} src={backarrow} /></div>
+                    :<div id='summary-container'><p className='education-details' id="exp-summary">Pivoting from tech-adjacent roles into a tech-focused role. Click each entry to see how my past roles have prepared me to be a successful software developer! </p></div>}
+            <h2 className='sub-title'id="experience-sub-title">experience and education</h2>
             <div className="jobs-section">
 
                 {selectedJob?
                 roles.map((role=>{if(role.org===selectedJob){
                     return(
-                    <JobDetails org={role.org} title={role.title} details={role.skills} id={role.org} summary={role.summary} />)
+                    <JobDetails org={role.org} title={role.title} qualities={role.qualities} id={role.org} summary={role.summary} skills={role.skills} />)
                 }}))
                 :roles.map(role=>{
                     return(
