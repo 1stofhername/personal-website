@@ -1,14 +1,14 @@
-export const contacts=[
+export const contacts = [
     {
-        contact:"github",
+        type:"github",
         link:"https://github.com/1stofhername",
     },
     {
-        contact:'linkedin',
+        type:'linkedin',
         link:"http://www.linkedin.com/in/idealcandidate",
     },
     {
-        contact:'email',
+        type:'email',
         link:"mailto:aliciaparris@zoho.com",
     },
 ]

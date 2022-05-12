@@ -23,6 +23,11 @@ export default function Landing () {
                 <span></span>
                 <span></span>
             </div>
+            <div className="arrow-left">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </div>
         </>
     )

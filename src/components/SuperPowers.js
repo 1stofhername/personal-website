@@ -10,7 +10,7 @@ import typescript from '../assets/icons/typescript.svg';
 export default function SuperPowers () {
     
     return (
-<div id="super-powers-container">
+<div className="about-paragraph-container">
                 <h2 className="sub-title-2">SUPERPOWERS</h2>
                 <div className="skill-container">
                     <div id="js-container" className="skill-icon"><img id="javascript" src={javaScript} />JavaScript</div>

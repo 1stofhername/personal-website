@@ -3,26 +3,11 @@ import { useEffect, useState } from "react";
 import '../css/App.css';
 import '../css/mobile.css'
 import Landing from './Landing';
-import ExperienceAndEd from './ExperienceAndEd';
-import Projects from './Projects';
+import JobsContainer from './JobsContainer';
+import ProjectsContainer from './ProjectsContainer';
 
 
 function App() {
-
-  const [scrollPosition, setScrollPosition] = useState(0);
-  const handleScroll = () => {
-    const position = window.pageYOffset;
-    setScrollPosition(position);
-    console.log(position);
-  };
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
 
   return (
     <div className="App">
@@ -31,10 +16,10 @@ function App() {
           <Landing />
         </section>
         <section className="ex-and-ed">
-          <ExperienceAndEd />
+          <JobsContainer />
         </section>
         <section className="projects">
-          <Projects />
+          <ProjectsContainer />
         </section>
       </div>
     </div>
