@@ -18,7 +18,7 @@ export default function JobDetails ({ org, qualities, skills, summary, title }) 
     })
 
     return (
-        <>
+        <div id="job-details-section">
             <div className='detail-container'>
                 <h2 className='dark-bold-text'>{title}</h2>
                 <p className='summary-paragraph'>{summary}</p>
@@ -33,7 +33,7 @@ export default function JobDetails ({ org, qualities, skills, summary, title }) 
                 <h2 className='dark-bold-text'>Qualities demonstrated</h2>
                 {qualitiesList}
             </div>
-        </>
+        </div>
     )
 
 }
